@@ -10,18 +10,23 @@ public class Prompt {
 		Calendar cal = new Calendar();
 
 		int month = 1;
+		int year=-1;
 
 		while (true) {
+			System.out.println("년도를 입력하세요");
+			System.out.print("YEAR> ");
+			year=scanner.nextInt();
 			System.out.println("달을 입력하세요");
-			System.out.print(PROMPT);
+			System.out.print("MONTH> ");
 			month = scanner.nextInt();
+			
 			if (month == -1) {// -1이면 빠져나가도록
 				break;
 			}
 			if (month > 12) {
 				continue;// continue를 만나면 루프의 처음으로 돌아감
 			}
-			cal.printCalendar(2020, month);
+			cal.printCalendar(year, month);
 
 		}
 		System.out.println("Bye.");
